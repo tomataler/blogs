@@ -1,60 +1,40 @@
-<header>
-<!-- 
-  <nav class="main-menu">
+<header class="site-header">
+  <div class="main-menu">
     <ul>
       {% for item in site.navigation %}
          {% if item.name != "category" and item.name != "tag" %}
-           <li><a href="{{site.baseurl}}{{ item.url }}">{{ item.title }}</a></li>
+           <li class="mainmenu-item"><a href="{{site.baseurl}}{{ item.url }}">{{ item.title }}</a></li>
          {% endif %}
         
         {% if item.name == "category" %}
-           <li><a href="#">{{ item.title }}</a></li>
-           <ul class="sub-menu">
-              {% for category in site.categories %}
-                <li>
-                  <a class="nav-item"  href="{{ site.baseurl }}/{{ site.category_dir }}/{{ category | first }}">
-                    {{ category | first }} ({{ category | last | size }})
-                  </a>
-                </li>
-              {% endfor %}
-           </ul>
+           <li class="mainmenu-item"> <a chref="#">{{ item.title }}</a>
+            <ul class="sub-menu">
+                {% for category in site.categories %}
+                  <li>
+                    <a class="submenu-item" href="{{ site.baseurl }}/{{ site.category_dir }}/{{ category | first }}">
+                      {{ category | first }} ({{ category | last | size }})
+                    </a>
+                  </li>
+                {% endfor %}
+            </ul>
+          </li>
         {% endif %}
 
         {% if item.name == "tag" %}
-          <li><a  href="#">{{ item.title }}</a> tag 123123</li>
-          <ul class="sub-menu">
-            {% for tag in site.tags %}
-              <li>
-                <a class="nav-item"  href="{{ site.baseurl }}/{{ site.tag_dir }}/{{ tag | first }}">
-                  {{ tag | first }} ({{ tag | last | size }})
-                </a>
-              </li>
-            {% endfor %}
-          </ul>
+          <li class="mainmenu-item"><a href="#">{{ item.title }}</a>
+            <ul class="sub-menu">
+              {% for tag in site.tags %}
+                <li>
+                  <a class="submenu-item" href="{{ site.baseurl }}/{{ site.tag_dir }}/{{ tag | first }}">
+                    {{ tag | first }} ({{ tag | last | size }})
+                  </a>
+                </li>
+              {% endfor %}
+            </ul>
+          </li>
         {% endif %}
 
       {% endfor %}
     </ul>
-  </nav>
-
-   -->
-
-<nav class="main-menu">
-    <ul>
-        <li>
-            <a href="#">Menu 1</a>
-            <ul class="sub-menu">
-                <li><a href="#">Sub-menu 1</a></li>
-                <li><a href="#">Sub-menu 2</a></li>
-                <!-- 추가 서브 메뉴 항목 -->
-            </ul>
-        </li>
-        <li>
-            <a href="#">Menu 2</a>
-            <!-- 서브 메뉴가 필요하면 여기에 추가 -->
-        </li>
-        <!-- 추가 메인 메뉴 항목 -->
-    </ul>
-</nav>
-
+  </div>
 </header>

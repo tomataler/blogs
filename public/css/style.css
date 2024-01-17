@@ -87,12 +87,15 @@ code {
 	display: flex;
 	justify-content: space-between;
 	flex-flow: row nowrap;
+	background-color: #28a745;
 }
 
 .content {
-	/*margin-left: 180px;*/
+	/* margin-left: 180px; */
 	flex: 1 1 auto;
-	padding: 0px 30px;
+	padding: 0px 0px;
+	margin: 0 0 0 0;
+	background-color: #007bff;
 }
 
 .sidebar {
@@ -309,11 +312,6 @@ footer {
 	color: #ccc;
 }
 
-.site-header {
-	height: 300px;
-}
-
-
 
 @media (max-width: 576px) {
 	article {
@@ -355,48 +353,84 @@ footer {
 }
 
 
+.site-header {
+    height: 80px;
+	background-color: #222;
+	color: #fff;
+	padding: 0;
+	margin: 0;
+
+}
 
 /* 메인 메뉴 스타일 */
-.main-menu ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex; /* Flexbox를 사용하여 항목을 옆으로 배열 */
+.main-menu > ul {
+    list-style-type: none;
+    display: flex; /* 항목들을 옆으로 배열 */
 }
 
-.main-menu ul li {
+.main-menu > ul > li {
     position: relative; /* 서브 메뉴를 위한 상대적 위치 */
+    padding: 14px 16px;
+	color: #fff;
 }
 
-.main-menu ul li a {
-    display: block;
-    padding: 10px 15px; /* 메뉴 항목의 패딩 */
+
+.main-menu > ul > li a {
     text-decoration: none;
-    color: black; /* 메뉴 텍스트 색상 */
+    color: #fff;
 }
 
 /* 서브 메뉴 스타일 */
 .sub-menu {
-    display: none; /* 기본적으로 서브 메뉴 숨김 */
-    position: absolute; /* 메인 메뉴 항목에 상대적인 절대 위치 */
-    top: 100%; /* 메인 메뉴 바로 아래에 위치 */
-    left: 0;
-    list-style: none;
-    padding: 0;
-    margin: 0;
+	display: none; /* 기본적으로 서브 메뉴 숨김 */
+    position: absolute; /* 상대적 위치 설정 */
+    background-color: #000;
+    min-width: 200px;
+    box-shadow: 0px 6px 6px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    left: 0; /* 상위 메뉴 항목과 같은 위치에 배치 */
+
 }
 
-.sub-menu li a {
-    padding: 10px 15px; /* 서브 메뉴 항목의 패딩 */
-    white-space: nowrap; /* 텍스트가 메뉴 너비를 초과하지 않도록 함 */
+.sub-menu li {
+    display: block; /* 서브 메뉴 항목을 수직으로 배열 */
+}
+
+/* 메인 메뉴 항목에 마우스를 올리면 서브 메뉴 표시 */
+.main-menu > ul > li:hover .sub-menu {
+    display: block; /* 서브 메뉴 표시 */
+	color: #000;
+}
+
+.main-menu > ul > li:hover .sub-menu li {
+    padding: 0; /* 서브 메뉴 항목의 패딩을 제거하거나 조정 */
+}
+
+/* 서브 메뉴 링크 스타일 */
+.sub-menu a {
+    padding: 6px 6px;
     text-decoration: none;
-    color: black; /* 서브 메뉴 텍스트 색상 */
-    background-color: #f0f0f0; /* 서브 메뉴 배경 색상 */
-    display: block;
+    color: black; /* 서브 메뉴 링크 색상 */
+    display: block; /* 클릭 가능 영역을 늘리기 위해 블록 요소로 설정 */
 }
 
-/* 마우스 오버 시 서브 메뉴 표시 */
-.main-menu ul li:hover .sub-menu {
-    background-color:#007bff;
-	display: block;
+.sub-menu a:hover {
+    background-color: #444; /* 호버 상태의 배경 색상 */
+}
+
+
+.mainmenu-item {
+	font-size: 100%;
+	font-family: "Noto Sans";
+	text-transform: uppercase;
+	/* border-bottom: 1px solid gray; */
+	margin-bottom: 5px;
+	color: #000;
+}
+
+a.submenu-item {
+	font-size: 100%;
+	font-family: "Noto Sans";
+	text-transform: capitalize;
+	color: #000
 }
