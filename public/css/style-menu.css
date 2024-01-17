@@ -1,0 +1,43 @@
+/* 메인 메뉴 스타일 */
+.main-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Flexbox를 사용하여 항목을 옆으로 배열 */
+}
+
+.main-menu ul li {
+    position: relative; /* 서브 메뉴를 위한 상대적 위치 */
+}
+
+.main-menu ul li a {
+    display: block;
+    padding: 10px 15px; /* 메뉴 항목의 패딩 */
+    text-decoration: none;
+    color: black; /* 메뉴 텍스트 색상 */
+}
+
+/* 서브 메뉴 스타일 */
+.sub-menu {
+    display: none; /* 기본적으로 서브 메뉴 숨김 */
+    position: absolute; /* 메인 메뉴 항목에 상대적인 절대 위치 */
+    top: 100%; /* 메인 메뉴 바로 아래에 위치 */
+    left: 0;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+ /* .sub-menu li a {
+    padding: 10px 15px; 
+    white-space: nowrap; 
+    text-decoration: none;
+    color: black; 
+    background-color: #f0f0f0; 
+    display: block;
+}  */
+
+/* 마우스 오버 시 서브 메뉴 표시 */
+.main-menu ul li:hover .sub-menu {
+    display: block;
+}
