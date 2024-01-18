@@ -352,7 +352,9 @@ footer {
 
 
 .site-header {
-    height: 80px;
+    display: flex;
+	justify-content: space-between;
+	height: 85px;
 	background-color: #222;
 	color: #fff;
 	padding: 0;
@@ -360,13 +362,28 @@ footer {
 
 }
 
+.main-log {
+	display: flex;
+	text-decoration: none;
+    color: #fff;
+	padding-left: 0;
+}
+.main-log-item {
+	color: #fff;
+}
+
+.main-menu {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+}
+
 /* 메인 메뉴 스타일 */
 .main-menu > ul {
-    list-style-type: none;
-    display: flex; /* 항목들을 옆으로 배열 */
-	margin-block-start: 0em;
-	padding: 1em;
-	/* padding-inline-start: 0px; */
+	list-style-type: none;
+	display: flex;
+	margin-block-start: 1.2em;
 }
 
 .main-menu > ul > li {
@@ -387,7 +404,7 @@ footer {
     position: absolute; /* 상대적 위치 설정 */
     background-color: #222;
     min-width: 200px;
-    box-shadow: 0px 6px 6px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.2);
     z-index: 1;
     left: 0; /* 상위 메뉴 항목과 같은 위치에 배치 */
 
@@ -409,7 +426,7 @@ footer {
 
 /* 서브 메뉴 링크 스타일 */
 .sub-menu a {
-    padding: 6px 6px;
+    padding: 5px 5px;
     text-decoration: none;
     color: black; /* 서브 메뉴 링크 색상 */
     display: block; /* 클릭 가능 영역을 늘리기 위해 블록 요소로 설정 */
@@ -425,7 +442,6 @@ footer {
 	font-family: "Noto Sans";
 	text-transform: uppercase;
 	/* border-bottom: 1px solid gray; */
-	margin-bottom: 5px;
 	color: #000;
 }
 
@@ -434,4 +450,16 @@ a.submenu-item {
 	font-family: "Noto Sans";
 	text-transform: capitalize;
 	color: #000
+}
+
+.mainmenu-togglebtn {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	padding-right: 6px;
+	color: #fff;
+}
+
+.hidden {
+	display: none;
 }

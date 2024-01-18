@@ -2,12 +2,14 @@
 
 
   <div class="main-menu">
-    <div class="navbar_logo">
-      <i class="fas fa-blog"></i>
-      <a href="">Github Page Blog</a>
-    </div>
+    <ul class="maimenu-ul">
+      <li class="main-log-item">
+        <i class="fa-brands fa-blogger-b"></i>
+        <a href="{{site.baseurl}}/">tomataler's Blog</a>
+      </li>
+    </ul>
 
-    <ul>
+    <ul class="maimenu-ul">
       {% for item in site.navigation %}
          {% if item.name != "category" and item.name != "tag" %}
            <li class="mainmenu-item"><a href="{{site.baseurl}}{{ item.url }}">{{ item.title }}</a></li>
@@ -44,9 +46,14 @@
       {% endfor %}
     </ul>
 
-    <ul class="navbar_icons">
+    <ul class="maimenu-ul">
       <li><i class="fab fa-google"></i></li>
       <li><i class="fab fa-slack"></i></li>
     </ul>
+  </div>
+  <div class="mainmenu-togglebtn" >
+    <a class="main-log-item" href="#" >
+      <i class="fas fa-hamburger"></i>
+    </a>
   </div>
 </header>
