@@ -463,3 +463,26 @@ a.submenu-item {
 .hidden {
 	display: none;
 }
+
+#search-bar {
+    margin: 32px auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+	width: calc(100% - 30px);
+    padding: 0 20px;
+}
+
+#search-input {
+    width: calc(100% - 30px);
+    border: none;
+    line-height: 44px;
+    outline: none;
+    border-style: none;
+	font-size: 100%;
+	font-family: "Noto Sans";
+}
+
+.result-list-item {
+	color: #000;
+
+}
