@@ -1,5 +1,12 @@
 <header class="site-header">
+
+
   <div class="main-menu">
+    <div class="navbar_logo">
+      <i class="fas fa-blog"></i>
+      <a href="">Github Page Blog</a>
+    </div>
+
     <ul>
       {% for item in site.navigation %}
          {% if item.name != "category" and item.name != "tag" %}
@@ -35,6 +42,11 @@
         {% endif %}
 
       {% endfor %}
+    </ul>
+
+    <ul class="navbar_icons">
+      <li><i class="fab fa-google"></i></li>
+      <li><i class="fab fa-slack"></i></li>
     </ul>
   </div>
 </header>
