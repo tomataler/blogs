@@ -1,6 +1,9 @@
 const toggleBtn = document.querySelector('.mainmenu-togglebtn');
-const mainmenu = document.querySelector('.main-menu');
+const mainmenuul = document.querySelector('.mainmenu-ul');
+const mainmenusearch = document.querySelector('.mainmenu-search');
 
 toggleBtn.addEventListener('click', () => {
-    mainmenu.classList.toggle('hidden')
+    mainmenuul.classList.toggle('active');
+    mainmenusearch.classList.toggle('active');
+
 })
