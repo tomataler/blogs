@@ -152,6 +152,13 @@ feed:
 safe: false
 lsi: false
 
+repository: "tomataler/blogs-comments"
+comments:
+  provider: utterances
+  utterances:
+    theme: "github-light"
+    issue_term: "pathname"
+
 
 # travis-ci와 연동되는 github username
 #username: tomataler

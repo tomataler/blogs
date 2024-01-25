@@ -583,4 +583,11 @@ a.submenu-item {
 		width: 100%;
 		display: none; */
 	}
+	.utterances {
+		max-width: 100% !important;
+	}
+	.comments {
+		max-width: 100% !important;
+	}
+}
 }
